@@ -2,4 +2,3 @@
 
 My NixOS configuration files.
 
-
