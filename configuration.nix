@@ -20,6 +20,7 @@
 
     # BOOT
     ./config/boot/acpi_call.nix
+    ./config/boot/kernelLatest.nix
     ./config/boot/luks.nix # Uses lockedDevice
     ./config/boot/systemd-boot.nix
     ./config/boot/tmpOnRAM.nix
@@ -33,7 +34,7 @@
 
     # INTERFACE
     ./config/services/xserver.nix
-    ./config/services/de_gnome.nix
+    ./config/services/de_gnomeW.nix
 
     # KEYMAPS
     ./config/keymaps/it.nix
@@ -58,7 +59,7 @@
     ./config/services/tlp.nix
 
     # SYSTEM
-    ./config/system.nix
+    ./config/system1909.nix
 
     # TIMEZONE
     ./config/timezones/rome.nix

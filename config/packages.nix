@@ -100,6 +100,7 @@ in
     gnome-builder
 
     gnome-mpv 
+    gnome3.gnome-tweak-tool
 
     # gnomeExtensions.gsconnect
     gnomeExtensions.timepp
@@ -135,6 +136,13 @@ in
     # ocmal
     ocaml
     ocamlPackages.merlin
+
+    texstudio
+    texlive.combined.scheme-full
+
+    xwayland
+
+    unetbootin
 
   ];
 
