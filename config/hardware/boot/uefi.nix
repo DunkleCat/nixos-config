@@ -1,3 +1,5 @@
+{ luksEnabled, ... }:
+
 {
   boot.loader = {
     systemd-boot = {
@@ -8,4 +10,6 @@
 
     efi.canTouchEfiVariables = true;
   };                                                                                                            
+
+  boot.tmpOnTmpfs = true;
 }

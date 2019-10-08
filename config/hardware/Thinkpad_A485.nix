@@ -1,13 +1,16 @@
 {
   imports = [
-    cpu/amd.nix
+    ./boot/kernelLatest.nix 
+    ./boot/uefi.nix 
 
-    common/bluetooth.nix
-    common/opengl.nix
-    common/pulseaudio.nix
-    common/scanner.nix
+    ./cpu/amd.nix
 
-    laptop/tlp.nix
-    laptop/tlpDualBattery.nix
+    ./laptop/tlp/dualBattery.nix
+    ./laptop/touchpad.nix
+
+    ./miscellaneous/bluetooth.nix
+    ./miscellaneous/opengl.nix
+    ./miscellaneous/pulseaudio.nix
+    ./miscellaneous/scanner.nix
   ];
 }

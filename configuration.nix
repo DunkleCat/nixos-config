@@ -9,7 +9,10 @@
 
   _module.args = {
     hostName = "nxs";
-    lockedDevice = "dev/disk/by-label/nixos-root";
+
+    luksEnabled = true;
+    lockedDevice = "dev/nvme0n1p2";
+    
     systemVersion = "19.09";
   };
 
@@ -20,24 +23,18 @@
     ./hardware-configuration.nix
 
     # BOOT
-    ./config/boot/acpi_call.nix
-    ./config/boot/kernelLatest.nix
-    ./config/boot/luks.nix # Uses lockedDevice
-    ./config/boot/systemd-boot.nix
-    ./config/boot/tmpOnRAM.nix
-     
+    ./config/crypted/luks.nix     
+
     # HARDWARE
     ./config/hardware/Thinkpad_A485.nix
 
     # INTERFACE
-    ./config/services/xserver.nix
-    ./config/services/de_gnomeW.nix
+    ./config/de/gnome_full.nix
 
     # KEYMAPS
     ./config/keymaps/it.nix
 
     # NETWORKING
-    ./config/networking/firewall.nix
     ./config/networking/hostname.nix # Uses hostName
     ./config/networking/networkManager.nix
 

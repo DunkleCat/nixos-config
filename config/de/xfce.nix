@@ -1,4 +1,6 @@
 {
+  imports = [ ./servers/x.nix ];
+
   services.xserver = {
 
     displayManager.lightdm = {

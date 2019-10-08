@@ -81,29 +81,29 @@ in
     ######
 
     # GNOME SUITE
-    adwaita-qt
-    evince
+    # adwaita-qt
+    # evince
 
-    gnome3.dconf
-    gnome3.dconf-editor
-    gnome3.evolution
-    gnome3.file-roller
-    gnome3.gnome-calendar
-    gnome3.gnome-contacts
-    gnome3.gnome-keyring
-    gnome3.gnome-screenshot
-    gnome3.polari
-    gnome3.pomodoro
-    gnome3.gnome-todo
-    gnome3.simple-scan
+    # gnome3.dconf
+    # gnome3.dconf-editor
+    # gnome3.evolution
+    # gnome3.file-roller
+    # gnome3.gnome-calendar
+    # gnome3.gnome-contacts
+    # gnome3.gnome-keyring
+    # gnome3.gnome-screenshot
+    # gnome3.polari
+    # gnome3.pomodoro
+    # gnome3.gnome-todo
+    # gnome3.simple-scan
 
-    gnome-builder
+    # gnome-builder
 
-    gnome-mpv 
-    gnome3.gnome-tweak-tool
+    # gnome-mpv 
+    # gnome3.gnome-tweak-tool
 
     # gnomeExtensions.gsconnect
-    gnomeExtensions.timepp
+    # gnomeExtensions.timepp
 
     ######
 
