@@ -17,6 +17,7 @@
     users.guest = {
       extraGroups = [ "networkmanager" ];
       isNormalUser = true;
+      # password = "password";
       passwordFile = "/etc/nixos/keys/users-guest";
       uid = 1050;
     };

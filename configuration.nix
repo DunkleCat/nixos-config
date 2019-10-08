@@ -26,11 +26,7 @@
     ./config/boot/tmpOnRAM.nix
      
     # HARDWARE
-    ./config/hardware/amd.nix
-    ./config/hardware/bluetooth.nix
-    ./config/hardware/opengl.nix
-    ./config/hardware/pulseaudio.nix
-    ./config/hardware/scan.nix
+    ./config/hardware/Thinkpad_A485.nix
 
     # INTERFACE
     ./config/services/xserver.nix
@@ -56,7 +52,6 @@
     ./config/services/resolved.nix
     # ./config/services/fingerprint.nix
     ./config/services/openssh.nix
-    ./config/services/tlp.nix
 
     # SYSTEM
     ./config/system1909.nix
