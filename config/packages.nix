@@ -144,6 +144,7 @@ in
 
     unetbootin
 
+    parted
   ];
 
   nixpkgs.config.allowUnfree = true;

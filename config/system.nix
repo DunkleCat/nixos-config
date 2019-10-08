@@ -1,11 +1,13 @@
+{ systemVersion, ... }:
+
 {
   system = {
     autoUpgrade = {
-      channel = "nixos-19.03";
+      channel = "nixos-" + systemVersion;
       dates = "weekly";
       enable = true;
     };
-    stateVersion = "19.03";
+    stateVersion = systemVersion;
   };
 
   nix = {

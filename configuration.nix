@@ -9,7 +9,8 @@
 
   _module.args = {
     hostName = "nxs";
-    lockedDevice = "dev/nvme0n1p2";
+    lockedDevice = "dev/disk/by-label/nixos-root";
+    systemVersion = "19.09";
   };
 
 
@@ -54,7 +55,7 @@
     ./config/services/openssh.nix
 
     # SYSTEM
-    ./config/system1909.nix
+    ./config/system.nix # Uses systemVersion
 
     # TIMEZONE
     ./config/timezones/rome.nix
@@ -66,9 +67,6 @@
     # ./config/virtualisation/docker.nix
     
     # HOME MANAGER
-    "${builtins.fetchGit {
-      ref = "master";
-      url = "https://github.com/rycee/home-manager";
-    }}/nixos"
+    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz }/nixos"
   ];
 }
