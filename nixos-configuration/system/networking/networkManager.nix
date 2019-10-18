@@ -1,4 +1,8 @@
 {
+  imports = [
+    ./hostname.nix
+  ];
+
   networking.networkmanager = {
     enable = true;
 

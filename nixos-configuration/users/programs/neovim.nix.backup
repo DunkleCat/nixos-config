@@ -18,13 +18,12 @@ in
     viAlias = true;
     vimAlias = true;
 
-    withPython3 = true;
-
     plugins = [ 
       pkgs.vimPlugins.lightline-vim 
       pkgs.vimPlugins.nerdtree
       pkgs.vimPlugins.gitgutter
       pkgs.vimPlugins.auto-pairs
+      pkgs.vimPlugins.fzf-vim
 
       pkgs.vimPlugins.deoplete-nvim
       pkgs.vimPlugins.deoplete-clang
@@ -34,9 +33,9 @@ in
       pkgs.vimPlugins.neoinclude
       pkgs.vimPlugins.neomake
 
-      pkgs.vimPlugins.haskell-vim
-      pkgs.vimPlugins.stylish-haskell
-      pkgs.vimPlugins.intero-neovim
+      # pkgs.vimPlugins.haskell-vim
+      # pkgs.vimPlugins.stylish-haskell
+      # pkgs.vimPlugins.intero-neovim
     ];
 
     extraConfig = ''

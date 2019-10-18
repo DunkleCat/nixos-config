@@ -1,3 +1,5 @@
+# This will install automatically firefox
+
 { pkgs, ... }:
 
 let

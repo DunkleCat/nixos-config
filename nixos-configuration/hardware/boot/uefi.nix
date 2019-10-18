@@ -1,5 +1,3 @@
-{ luksEnabled, ... }:
-
 {
   boot.loader = {
     systemd-boot = {

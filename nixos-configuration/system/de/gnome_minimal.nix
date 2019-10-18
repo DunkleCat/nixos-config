@@ -1,5 +1,11 @@
+{ pkgs, ... }:
+
 {
 
+  environment.systemPackages = with pkgs; [
+    xwayland
+  ];
+  
   imports = [ ./servers/x.nix ];
 
   services.xserver = {
