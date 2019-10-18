@@ -32,10 +32,6 @@ in
       pkgs.vimPlugins.deoplete-rust
       pkgs.vimPlugins.neoinclude
       pkgs.vimPlugins.neomake
-
-      # pkgs.vimPlugins.haskell-vim
-      # pkgs.vimPlugins.stylish-haskell
-      # pkgs.vimPlugins.intero-neovim
     ];
 
     extraConfig = ''
