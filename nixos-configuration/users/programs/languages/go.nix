@@ -6,4 +6,8 @@
     go
     gocode
   ];
+
+  programs.neovim.plugins = with pkgs.vimPlugins; [
+    deoplete-go
+  ];
 }

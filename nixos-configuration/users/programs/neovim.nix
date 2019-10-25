@@ -13,6 +13,10 @@ let
 in
 
 {
+  home.packages = with pkgs; [
+    cmake
+  ];
+
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -27,7 +31,6 @@ in
 
       pkgs.vimPlugins.deoplete-nvim
       pkgs.vimPlugins.deoplete-clang
-      pkgs.vimPlugins.deoplete-go
       customPlugins.deoplete-ocaml
       pkgs.vimPlugins.deoplete-rust
       pkgs.vimPlugins.neoinclude
@@ -52,24 +55,12 @@ in
       let g:NERDTreeDirArrowExpandable = '▸'
       let g:NERDTreeDirArrowCollapsible = '▾'
       
-      " gitgutter
-      "
-
-      " auto-pairs
-      "
-
       " deoplete-nvim
       "
       let g:deoplete#enable_at_startup = 1
       let g:deoplete#complete_method = "complete"
       let g:deoplete#ignore_sources = {}
       let g:deoplete#auto_complete_delay = 0
-
-      " deoplete-clang
-      "
-
-      " deoplete-go
-      "
 
       " deoplete-ocaml
       "

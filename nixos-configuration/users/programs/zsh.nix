@@ -18,7 +18,6 @@
         "git-extras"
         "git-flow"
         "gradle"
-        "redis"
         "sudo"
         "systemd"
         "tmux"
