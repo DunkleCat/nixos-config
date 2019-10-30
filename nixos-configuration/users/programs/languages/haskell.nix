@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     ghc
+    cabal2nix
   ];
 
   programs.neovim = {

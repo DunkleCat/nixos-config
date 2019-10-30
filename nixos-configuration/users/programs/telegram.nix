@@ -1,21 +1,13 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 let
-  unstableTarball =
-    fetchTarball
-      https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz;
+  unstable = import (fetchTarball https://releases.nixos.org/nixos/unstable/nixos-20.03pre194293.2436c27541b/nixexprs.tar.xz) {};
 in
 
 {
-  nixpkgs.config = {
-    packagesOverrides = pkgs: {
-      unstable = import unstableTarball {
-        config = config.nixpkgs.config;
-      };
-    };
+  home = {
+    packages = with pkgs; [
+      unstable.tdesktop
+    ];  
   };
-
-  home.packages = with pkgs; [
-    unstable.tdesktop
-  ];
 }
