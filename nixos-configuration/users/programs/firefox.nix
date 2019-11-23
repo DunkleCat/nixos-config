@@ -1,5 +1,3 @@
-# This will install automatically firefox
-
 { pkgs, ... }:
 
 let
@@ -9,12 +7,6 @@ let
 in 
 
 {
- #  imports = nur-no-pkgs.repos.rycee.firefox-addons;
-
-  # nixpkgs.overlays = [
-    # nur-no-pkgs.repos.rycee.firefox-addons
-  # ];
-
   programs.firefox = {
     enable = true;
     extensions = with nur-no-pkgs.repos.rycee.firefox-addons; [

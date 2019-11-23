@@ -7,6 +7,7 @@
     # texlive.combined.scheme-small
     # texlive.combined.scheme-medium
     texlive.combined.scheme-full
+    gnome-latex
   ];
 
   programs.neovim = {

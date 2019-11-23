@@ -1,6 +1,23 @@
-{ systemVersion, ... }:
+{ systemVersion, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs;
+  [  direnv
+     dmidecode
+     file
+     fzf
+     lshw
+     lolcat
+     mkpasswd
+     neofetch
+     parted
+     pciutils
+     tmux
+     udisks
+     usbutils
+     wget    
+  ];
+
   appstream.enable = true;
   security.allowSimultaneousMultithreading = true;
 
@@ -17,13 +34,13 @@
     
     gc = {
       automatic = true;
-      dates = "weekly";
+      dates = "daily";
       options = "--delete-older-than 30d";
     };
 
     optimise = {
       automatic = true;
-      dates = [ "weekly" ];
+      dates = [ "daily" ];
     };
 
     maxJobs = 4;

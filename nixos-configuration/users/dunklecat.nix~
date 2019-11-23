@@ -1,0 +1,51 @@
+{ pkgs, ... }:
+
+{
+  programs.zsh.enable = true;
+
+  users.users.dunklecat = {
+    extraGroups = [ "audio" "networkmanager" "networking" "wheel" ];
+    passwordFile = "/etc/nixos/keys/users-dunklecat";
+    isNormalUser = true;
+    shell = pkgs.zsh;
+    uid = 1000;
+  };
+
+  home-manager.users.dunklecat = { pkgs, ... }: {
+
+    programs.home-manager.enable = true;
+    nixpkgs.config.allowUnfree = true;
+    
+    imports = [
+
+      ./programs/zsh.nix
+
+      # PROGRAMMING
+      ./programs/languages/c_cpp.nix
+      ./programs/languages/go.nix
+      ./programs/languages/haskell.nix
+      ./programs/languages/latex.nix
+      ./programs/languages/ocaml.nix
+      ./programs/languages/python.nix
+      ./programs/direnv.nix
+      ./programs/git.nix
+
+      ./programs/emacs.nix  
+      ./programs/neovim.nix
+      # ./programs/vscode.nix
+      ./programs/vscodium.nix
+
+      ./programs/chromium.nix
+      ./programs/cli.nix  
+      ./programs/discord.nix
+      ./programs/firefox.nix
+      ./programs/keepassxc.nix
+      ./programs/spotify.nix
+      ./programs/ssh.nix
+      ./programs/steam.nix
+      ./programs/telegram.nix
+      ./programs/texstudio.nix
+      ./programs/unetbootin.nix
+    ];
+  };
+}
