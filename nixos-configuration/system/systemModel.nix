@@ -2,6 +2,12 @@
 # affermative (true). Otherwise (false) leave it commented
 
 {
+  _module.args = {
+    hostName = "example";
+    luksDevice = "/dev/something";
+    systemVersion = "19.09";
+  };
+
   imports = [
     # Do you want the latest kernel?
     # ./boot/kernelLatest.nix
