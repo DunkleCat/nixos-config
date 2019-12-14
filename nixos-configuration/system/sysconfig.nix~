@@ -4,11 +4,8 @@
   environment.systemPackages = with pkgs;
   [  direnv
      dmidecode
-     ed
      file
      fzf
-     htop
-     killall
      lshw
      lolcat
      mkpasswd

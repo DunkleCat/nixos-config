@@ -17,6 +17,9 @@ in
     unetbootin
     # vscode-with-extendions
     vscodium 
+    dolphinEmuMaster
+    pulseeffects
+    asciinema
 
     # Required
     qt5.full  # Required by texstudio

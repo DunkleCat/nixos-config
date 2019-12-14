@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.zsh.enable = true;
@@ -9,6 +9,17 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     uid = 1000;
+
+    # motd = with config; ''
+    #   Welcome to ${networking.hostName}
+    # 
+    #   - This machine is managed by NixOS
+    #   - All changes are futile
+    ##  
+    #   OS:      NixOS ${system.nixos.release} (${system.nixos.codeName})
+    #   Version: ${system.nixos.version}
+    #   Kernel:	 ${boot.kernelPackages.kernel.version}
+    #  '';    
   };
 
   home-manager.users.dunklecat = { pkgs, ... }: {
@@ -27,25 +38,18 @@
       ./programs/languages/latex.nix
       ./programs/languages/ocaml.nix
       ./programs/languages/python.nix
-      ./programs/direnv.nix
+      ./programs/languages/vala.nix
+      # ./programs/direnv.nix
       ./programs/git.nix
 
       ./programs/emacs.nix  
       ./programs/neovim.nix
-      # ./programs/vscode.nix
-      ./programs/vscodium.nix
 
       ./programs/chromium.nix
-      ./programs/cli.nix  
-      ./programs/discord.nix
       ./programs/firefox.nix
-      ./programs/keepassxc.nix
-      ./programs/spotify.nix
       ./programs/ssh.nix
-      ./programs/steam.nix
-      ./programs/telegram.nix
-      ./programs/texstudio.nix
-      ./programs/unetbootin.nix
+
+      ./programs/apps.nix
     ];
   };
 }
