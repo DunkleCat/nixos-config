@@ -6,6 +6,7 @@ in
 
 {
   home.packages = with pkgs; [
+    anki
     discord
     inkscape
     unstable.keepassxc
@@ -17,11 +18,14 @@ in
     unetbootin
     # vscode-with-extendions
     vscodium 
+    xmind
     dolphinEmuMaster
     pulseeffects
     asciinema
 
+    unstable.etcher
+
     # Required
-    qt5.full  # Required by texstudio
+    # qt5.full  # Required by texstudio
   ];
 }

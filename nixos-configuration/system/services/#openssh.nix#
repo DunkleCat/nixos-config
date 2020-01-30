@@ -1,8 +1,0 @@
-{
-  services.opensshenable = true;
-   startWhenNeeded = true;
-   
-  };
-  
-  programs.ssh.startAgent = true;                                                                               
-}

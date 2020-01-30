@@ -1,13 +1,16 @@
+{ hostName, ... };
+
 {
-  imports = [
-    ./hostname.nix
-  ];
+  networking = {
+  
+    hostName = hostName;
 
-  networking.networkmanager = {
-    enable = true;
+    networkmanager = {
+      enable = true;
 
-    wifi = {
-      macAddress = "random";
-    };
+      wifi = {
+        macAddress = "random";
+      };
+    };  
   };
 }

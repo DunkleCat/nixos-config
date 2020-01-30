@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./gnome.nix ];
+  imports = [ ./gnome_minimal.nix ];
 
   environment.systemPackages = with pkgs; [
     
@@ -19,7 +19,5 @@
 
     adwaita-qt
     evince
-
-    gnomeExtensions.timepp
   ];
 }
