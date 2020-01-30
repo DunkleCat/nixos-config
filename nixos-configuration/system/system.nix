@@ -10,7 +10,7 @@
     ./sysconfig.nix
     # ./boot/kernelLatest.nix
     ./boot/luks.nix
-    ./de/gnome.nix
+    ./de/gnome/gnome.nix
     ./keymaps/it.nix
     ./networking/networkManager.nix
     ./timezones/rome.nix
